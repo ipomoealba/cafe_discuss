@@ -6,10 +6,10 @@ var db = require('../models/db');
 var Sequelize = require('sequelize');
 var User = db.define('User', {
     id: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING(11),
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true,
+        // autoIncrement: true,
         unique: true
     },
     userName: {
@@ -32,5 +32,7 @@ var User = db.define('User', {
     timestamps: false
 })
 
-User.sync();
+User.sync(
+    // { force: true }
+);
 module.exports = User;

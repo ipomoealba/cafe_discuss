@@ -9,11 +9,11 @@ var db = require('../models/db');
 var Sequelize = require('sequelize');
 var Command = db.define('Command', {
     id: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING(11),
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true,
-        unique: true
+        // autoIncrement: true,
+        unique: true,
     },
     commamder:{
         type:Sequelize.STRING(15),
@@ -28,5 +28,7 @@ var Command = db.define('Command', {
     timestamps: false
 })
 
-Command.sync();
+Command.sync(
+    // { force: true }
+);
 module.exports = User;

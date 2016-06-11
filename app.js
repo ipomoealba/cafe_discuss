@@ -8,7 +8,7 @@ var session = require('express-session');
 var login = require('./routes/login')
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var article = require('./routes/article')
 var app = express();
 
 // view engine setup
@@ -22,11 +22,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(multer({ dest: './uploads/'}))
 
 app.use(session({secret : 'FuckingProject_Yes'}));
 app.use('/', routes);
 app.use('/users', users);
-app.use('/login',login)
+app.use('/login',login);
+app.use('/article',article);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

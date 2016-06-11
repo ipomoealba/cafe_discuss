@@ -9,11 +9,34 @@
     <%= user %>
 </div>
 
-<form method="post" action="/article/newCafe">
-    <div id>
+<div class="col-lg-6">
+    <form role="form" method="post" action="/article/newCafe"  enctype="multipart/form-data">
 
-    </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input name="title" class="form-control" type="text">
+        </div>
 
+        <div class="form-group">
+            <label>link</label>
+            <input name="link" class="form-control" type="text">
+        </div>
+
+        <div class="form-group">
+            <label>img</label>
+            <input type="file" class="form-control" name="image"/><br/>
+        </div>
+
+        <div class="form-group">
+            <label>Decription</label>
+            <textarea name="article" class="form-control" type="text"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success" value="Send">SUBMIT</button>
+    </form>
+</div>
+
+<%= test %>
 </form>
 </body>
 </html>

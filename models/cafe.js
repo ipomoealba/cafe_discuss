@@ -6,11 +6,12 @@ var db = require('../models/db');
 var Sequelize = require('sequelize');
 var Cafe = db.define('cafe', {
     id: {
-        type: Sequelize.INTEGER(3),
+        type: Sequelize.STRING(15),
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true,
-        unique: true
+        // autoIncrement: true,
+        unique: true,
+        // initialAutoIncrement:"100"
     },
     link: {
         type: Sequelize.STRING(100),
@@ -23,15 +24,14 @@ var Cafe = db.define('cafe', {
     img: {
         type: Sequelize.STRING(150),
         allowNull: false
-    },
-    command: {
-        type: Sequelize.STRING(500),
-        allowNull: false
     }
 }, {
     freezeTableName: true,
     timestamps: false
 })
+// db.query("ALTER TABLE cafe AUTO_INCREMENT = 20000");
+Cafe.sync(
+    // { force: true }
+);
 
-Cafe.sync();
 module.exports = Cafe;
