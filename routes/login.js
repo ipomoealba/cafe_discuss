@@ -20,7 +20,6 @@ router.post('/', function (req, res, next) {
 
     if (req.body.username == undefined || req.body.password == undefined) {
         res.render('login', {msg: req.body.password});
-        return;
     } else if (req.body.username == '' || req.body.password == '') {
         res.render('login', {msg: 'No Space'});
     } else {
@@ -43,7 +42,7 @@ router.post('/', function (req, res, next) {
 
 });
 
-router.get('/logout', function (res,req) {
+router.get('/logout', function (req,res) {
     res.redirect('/');
     res.locals.user = null;
 

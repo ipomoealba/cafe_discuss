@@ -6,7 +6,7 @@ var db = require('../models/db');
 var Sequelize = require('sequelize');
 var User = db.define('User', {
     id: {
-        type: Sequelize.STRING(11),
+        type: Sequelize.INTEGER(11),
         primaryKey: true,
         allowNull: false,
         // autoIncrement: true,
@@ -24,8 +24,17 @@ var User = db.define('User', {
         type: Sequelize.STRING(30),
         allowNull: false
     },
-    commanderScore:{
-        type:Sequelize.INTEGER(4)
+    aboutMe:{
+        type: Sequelize.STRING(300),
+        allowNull: true
+    },
+    img:{
+        type:Sequelize.STRING(50),
+        allowNull:false
+    },
+    counter:{
+        type:Sequelize.INTEGER(10),
+        allowNull:false
     }
 }, {
     freezeTableName: true,

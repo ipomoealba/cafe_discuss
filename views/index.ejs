@@ -27,25 +27,24 @@
         </div>
         <ul class="nav navbar-nav">
 
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="district.html">北部</a></li>
-                    <li><a href="district.html">中部</a></li>
-                    <li><a href="district.html">南部</a></li>
-                    <li><a href="district.html">東部</a></li>
-
+                    <li><a href="/district/N">北部</a></li>
+                    <li><a href="/district/W">中部</a></li>
+                    <li><a href="/district/S">南部</a></li>
+                    <li><a href="/district/E">東部</a></li>
 
                 </ul>
             </li>
-            <li><a href="/introduce">咖啡廳推薦</a></li>
+            <!--<li><a href="/introduce">咖啡廳推薦</a></li>-->
             <li><a href="/knowledge">咖啡豆知識</a></li>
             <li><a href="/history">咖啡歷史</a></li>
             <% if(!user) { %>
             <li><a href="/login">登入/註冊</a></li>
             <% } %>
             <% if(user) {%>
-            <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user %> <b class="caret"></b></a>
+            <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user.userName %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="/showPerson">個人資訊</a></li>
                     <li><a href="../login/logout">登出</a></li>

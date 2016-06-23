@@ -13,9 +13,9 @@ var Cafe = db.define('cafe', {
         unique: true,
         // initialAutoIncrement:"100"
     },
-    link: {
+    address: {
         type: Sequelize.STRING(100),
-        allowNull: false
+        allowNull: true
     },
     title: {
         type: Sequelize.STRING(20),
@@ -24,7 +24,20 @@ var Cafe = db.define('cafe', {
     img: {
         type: Sequelize.STRING(150),
         allowNull: false
+    },
+    phone:{
+        type:Sequelize.INTEGER(12),
+        allowNull: true
+    },
+    wifi:{
+        type:Sequelize.BOOLEAN,
+        allowNull:false
+    },
+    content:{
+        type:Sequelize.STRING(500),
+        allowNull:true
     }
+
 }, {
     freezeTableName: true,
     timestamps: false

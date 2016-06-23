@@ -5,13 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+
 var login = require('./routes/login')
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var article = require('./routes/article');
 var history = require('./routes/history');
-var personalPage = require('./routes/personalPage')
-
+var personalPage = require('./routes/personalPage');
+var district = require('./routes/district');
+var knowledge = require('./routes/knowledge');
+var introduce = require('./routes/introduce');
+var editcafePage = require('./routes/editcafePage')
 var app = express();
 
 // view engine setup
@@ -34,6 +38,10 @@ app.use('/login', login);
 app.use('/article', article);
 app.use('/history', history);
 app.use('/personalPage',personalPage);
+app.use('/district',district);
+app.use('/knowledge',knowledge);
+app.use('/introduce',introduce);
+app.use('/editcafePage',editcafePage);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');

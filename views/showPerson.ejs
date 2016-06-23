@@ -12,7 +12,6 @@
 @font-face {
 font-family: 'word';
 src: url('fonts/SentyTEA.ttf') format('truetype');
-unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;
 }
 </style>
     <head>
@@ -24,43 +23,42 @@ unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;
     </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">台灣咖啡地圖</a>
-        </div>
-        <ul class="nav navbar-nav right-nav">
-          <li><a href="index.html">Home</a></li>
-          <li ><a class="dropdown-toggle" data-toggle="dropdown"href="#"> 地區 <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-           <li><a href="district.html">北部</a></li>
-           <li><a href="district.html">中部</a></li>
-           <li><a href="district.html">南部</a></li>
-           <li><a href="district.html">東部</a></li>
-        </ul>
-      </li>
-          <li><a href="introduce.html">咖啡廳推薦</a></li>
-          <li><a href="knowledge.html">咖啡豆知識</a></li>
-          <li><a href="history.html">咖啡歷史</a></li>
-          <li><a href="login.html">登入/註冊</a></li>
-      <li ><a class="dropdown-toggle" id="login"data-toggle="dropdown"href="#"> 歡迎登入<b class="caret"></b></a>
-      <ul class="dropdown-menu">
-       <li><a href="showPerson.html">個人資訊</a></li>
-       <li><a href="district.html">登出</a></li>
-          
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">台北咖啡地圖</a>
+                </div>
+                <div class="right-nav">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="district?">北部</a></li>
+                                <li><a href="district.html">中部</a></li>
+                                <li><a href="district.html">南部</a></li>
+                                <li><a href="district.html">東部</a></li>
 
-        </ul>
-        </ul>
-      </div>  
-    </nav>
+                            </ul>
+                        </li>
+                        <!--<li><a href="introduce.html">咖啡廳推薦</a></li>-->
+                        <li><a href="knowledge.html">咖啡豆知識</a></li>
+                        <li><a href="history.html">咖啡歷史</a></li>
+                        <li><a href="login.html"> 登入/註冊</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <nav>
         <!-- <h3 id="title">個人資訊</h3> -->
         <div class="coverImage"> 
-            <img src="images/person.png" alt="personal" style="height:200px">
+            <img src="<%= usr.img %>" alt="personal" style="height:200px">
             <ul>
-                <li>暱稱：</li>
-                <li>E-mail：</li>
-                <li>總推薦數：</li>
-                <li>總數：</li>
+                <li>暱稱：<%= usr.userName %></li>
+                <li>E-mail：<%= usr.Email %></li>
+                <li>總推薦數：<%= usr.counter %></li>
+                <!--<li>總數：</li>-->
             </ul>
         </div> 
         <div>
@@ -80,17 +78,7 @@ unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;
                 <li>地址：</li>
             </ul>
     </div>
-    <div class="thumb article">
-            <img src="images/shop2.jpg" style="height:150px">
-            <ul>
-                <li>店名：</li>
-                <li>評價：4.3</li>
-                <li>人氣：</li>
-                <li>電話：</li>
-                <li>地址：</li>
-            </ul>
-    </div>
-        
+
 
 
 

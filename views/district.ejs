@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/district.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/district.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <style>
     @font-face {
         font-family: 'word';
-        src: url('fonts/SentyTEA') format('truetype');
+        src: url('fonts/SentyTEA.ttf') format('truetype');
         /*unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;*/
     }
 </style>
@@ -25,118 +25,100 @@
         </div>
         <ul class="nav navbar-nav">
 
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="district.html">北部</a></li>
-                    <li><a href="district.html">中部</a></li>
-                    <li><a href="district.html">南部</a></li>
-                    <li><a href="district.html">東部</a></li>
+                    <li><a href="/district/N">北部</a></li>
+                    <li><a href="/district/W">中部</a></li>
+                    <li><a href="/district/S">南部</a></li>
+                    <li><a href="/district/E">東部</a></li>
 
                 </ul>
             </li>
-            <li><a href="introduce.html">咖啡廳推薦</a></li>
-            <li><a href="knowledge.html">咖啡豆知識</a></li>
-            <li><a href="history.html">咖啡歷史</a></li>
+            <% if(user){ %>
+            <li><a href="/editcafePage">我要新增</a></li>
+            <% } %>
+            <li><a href="/knowledge">咖啡豆知識</a></li>
+            <li><a href="/history">咖啡歷史</a></li>
             <% if(!user) { %>
             <li><a href="/login">登入/註冊</a></li>
             <% } %>
             <% if(user) { %>
-            <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user %> <b class="caret"></b></a>
+            <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user.userName %> <b
+                            class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="/showPerson">個人資訊</a></li>
                     <li><a href="../login/logout">登出</a></li>
                 </ul>
             </li>
             <% } %>
-
-        </ul>
         </ul>
     </div>
-
 
 </nav>
 <container>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <button type="button" class="btn btn-warning">依評價排序排序</button>
+            <!--<div class="col-md-2"></div>-->
+
             <div class="ranks">
-                <div class="rank1">
-                    <img class="cafep" src="images/img/cafe.jpg">
-                    <ul class="inf">
-                        <li>店名:</li>
-                        <li>地址:</li>
+                <% if(cafe){ %>
+                <% for(var i = 0; i < cafe.length ; i++) { %>
 
-                        <li>電話:</li>
-                        <li>評價:</li>
-                        <li>wifi:</li>
-                    </ul>
-                    <button type="button" class="btn btn-secondary-outline">了解更多</button>
-                    <img class="cafep" src="images/img/cafe.jpg">
-                    <ul class="inf">
+                <div class="col-md-4">
+                    <div class="shopimg">
+                        <img class="cafep" src="<%= cafe[i].img %>">
+                    </div>
 
-                        <li>店名:</li>
-                        <li>地址:</li>
+                    <div>
+                        <ul class="inf list-group">
+                            <li class="list-group-item">店名: &nbsp <%= cafe[i].title %></li>
+                            <li class="list-group-item">地址: &nbsp <%= cafe[i].address %></li>
+                            <li class="list-group-item">電話: &nbsp <%= cafe[i].phone %></li>
+                            <li class="list-group-item">wifi: &nbsp <%= cafe[i].wifi %></li>
+                        </ul>
+                        <form action="../introduce/<%= cafe[i].id %>">
+                            <input class="btn btn-secondary-outline" name="id" type="submit"
+                                   value="瞭解更多">
+                        </form>
+                    </div>
 
-                        <li>電話:</li>
-                        <li>評價:</li>
-                        <li>wifi:</li>
-                    </ul>
-                    <button type="button" class="btn btn-secondary-outline">了解更多</button>
                 </div>
-
-                <div class="rank2">
-                    <img class="cafep" src="img/cafe.jpg">
-                    <ul class="inf">
-
-                        <li>店名:</li>
-                        <li>地址:</li>
-
-                        <li>電話:</li>
-                        <li>評價:</li>
-                        <li>wifi:</li>
-                    </ul>
-                    <button type="button" class="btn btn-secondary-outline">了解更多</button>
-                </div>
-
-
+                <% } %>
+                <% } %>
             </div>
 
 
         </div>
-        <div class="col-md-4">
-            <h2>頂尖推薦家</h2>
-            <div class="ranker">
-                <div class="person">
-                    <img class="personp" src="images/img/ranker.jpg">
+        <!--<div class="col-md-4">-->
+        <!--<h2>頂尖推薦家</h2>-->
+        <!--<% for(var i = 0;i < usr.length ; i++){ %>-->
+        <!--<div class="ranker">-->
+        <!--<div class="person">-->
+        <!--<img class="personp" src="<% usr[i].img %>">-->
+        <!--</div>-->
 
-                </div>
 
+        <!--<div class="critic">-->
+        <!--<br>-->
+        <!--<ul>-->
+        <!--<li>-->
+        <!--<% usr[i].img %>-->
+        <!--追蹤數: &nbsp; <%= usr[i].counter %>-->
+        <!--<% usr[i].img %>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--<form action="../personalPage/<%= usr[i].id %>">-->
+        <!--<input class="btn btn-success-outline" type="submit" value="查看個人檔案">-->
+        <!--</form>-->
+        <!--&lt;!&ndash;<button type="button" ></button>&ndash;&gt;-->
+        <!--</div>-->
 
-                <div class="critic">
-                    <br>
-                    <ul>
-                        <li>
-                            推薦數:
-                        </li>
-                        <li>
-                            追蹤數:
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-success-outline">查看個人檔案</button>
-                </div>
+        <!--</div>-->
+        <!--<% } %>-->
 
-            </div>
-            <div class="ranker">
-
-            </div>
-            <div class="ranker">
-
-            </div>
-            <div class="ranker">
-
-            </div>
-        </div>
+        <!--</div>-->
     </div>
 </container>
 </body>

@@ -1,129 +1,171 @@
-body{
-	background-image: url('../img/coffeeBeans.jpg');
+body {
+    background-image: url('../images/img/coffeeBeans.jpg');
 
-  background-attachment: fixed;
+    background-attachment: fixed;
 
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
 }
-.navbar-brand{
-  font-family: "word";
+
+.shopimg{
+    /*margin: 10px;*/
+    width:305px;
+    height: 220px;
+    padding-bottom: 10px;
 }
-.navbar-nav{
-float: right;
-font-family: "word2";
-font-family:Microsoft JhengHei;
+
+ul{
+    color:#000;
+
 }
-.dropdown{
-	top:200px;
-	padding-left: 20px;
-	padding-bottom: 20px;
+.inf {
+    /*font-color:white;*/
+    /*color:#000;*/
+    margin-top: 10px;
+    opacity: 0.8;
+    filter: alpha(opacity=40);
 }
-.dropdown-toggle{
-	width:80px;
+
+img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
-#login{
-  width: 100px;
+
+.navbar-brand {
+    font-family: "word";
 }
+
+.navbar-nav {
+    float: right;
+    font-family: "word2";
+    font-family: Microsoft JhengHei;
+}
+
+.dropdown {
+    top: 200px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.dropdown-toggle {
+    width: 80px;
+}
+
+#login {
+    width: 100px;
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
-   max-width: 800px;
+    max-width: 800px;
     background-color: white;
 }
-.navbar-fixed-top{
-	margin-bottom: 500px;
+
+.navbar-fixed-top {
+    margin-bottom: 500px;
 }
+
 .btn-warning {
     margin-top: 100px;
     margin-bottom: 0px;
-     margin-left:120px; 
-    background-color:#BB5500;
+    margin-left: 120px;
+    background-color: #BB5500;
 }
-.btn-primary{
-	margin-top: 100px;
-   
+
+.btn-primary {
+    margin-top: 100px;
+
     margin-bottom: 0px;
-    background-color:#A42D00; 
+    background-color: #A42D00;
 }
-.ranks{
-	
-   	padding: 20px;
-   background-color: black;
-   opacity:0.9; 
-   border-radius: 10px;
+
+.ranks {
+
+    padding-top: 20px;
+    /*background-color: black;*/
+    opacity: 0.9;
+    border-radius: 10px;
     margin: 10px 50px 50px 120px;
-    
-    display: flex;
-   
+    /*display: flex;*/
+
 }
 
+.cafep {
+    width: 320px;
 
-.cafep{
-	width: 320px;
-  
-	margin: 5px;
+    margin: 5px;
 }
-.ranker{
-	width: 400px;
-	height: 200px;
-   	padding: 20px;
-   background-color:  hsla(240, 100%, 100%, 0.8);
-   border-radius: 10px;
+
+.ranker {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    background-color: hsla(240, 100%, 100%, 0.8);
+    border-radius: 10px;
     margin: 50px 50px 50px 0px;
 
     display: flex;
-   
+
 }
-.personp{
-	width:120px;
-	padding: 5px;
+
+.personp {
+    width: 120px;
+    padding: 5px;
 }
-.criticise{
-  color: white;
-  font-family: "word2";
+
+.criticise {
+    color: white;
+    font-family: "word2";
     font-style: bold;
 }
 
-.critic>ul>li{
-  list-style-type:none;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-style: bold;
-  font-family:Microsoft JhengHei;
+.critic > ul > li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-style: bold;
+    font-family: Microsoft JhengHei;
 }
-.rank1{
-  list-style-type:none;
-  color: white;
-  font-family: "word2";
+
+.rank1 {
+    list-style-type: none;
+    color: white;
+    font-family: "word2";
     font-style: bold;
     font-size: 18px;
     float: left;
 }
-.rank1>ul>li{
-  list-style-type:none;
-  font-family:Microsoft JhengHei;
-}
-.btn-secondary-outline{
-  color: black;
-  float: right;
-  margin-bottom: 10px;
-}
-.btn-success-outline{
-  float: left;
-  background-color:black;
-  color: white;
- margin-left: 120px;
+
+.rank1 > ul > li {
+    list-style-type: none;
+    font-family: Microsoft JhengHei;
 }
 
-.rank2{
-  list-style-type:none;
-  color: white;
-  font-family: "word2";
+.btn-secondary-outline {
+    color: black;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.btn-success-outline {
+    float: left;
+    background-color: black;
+    color: white;
+    margin-left: 120px;
+}
+
+.rank2 {
+    list-style-type: none;
+    color: white;
+    font-family: "word2";
     font-style: bold;
     font-size: 18px;
 }
-.rank2>ul>li{
-  list-style-type:none;
-  font-family:Microsoft JhengHei;
+
+.rank2 > ul > li {
+    list-style-type: none;
+    font-family: Microsoft JhengHei;
 }
