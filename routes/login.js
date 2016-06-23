@@ -10,6 +10,7 @@ var User = require('../models/User');
 var session = require('session');
 
 router.get('/', function (req, res) {
+    
     res.render('login', {
         user: null,
         msg: null
@@ -17,15 +18,15 @@ router.get('/', function (req, res) {
 })
 router.post('/', function (req, res, next) {
 
-    if (req.body.userName == undefined || req.body.password == undefined) {
+    if (req.body.username == undefined || req.body.password == undefined) {
         res.render('login', {msg: req.body.password});
         return;
-    } else if (req.body.userName == '' || req.body.password == '') {
+    } else if (req.body.username == '' || req.body.password == '') {
         res.render('login', {msg: 'No Space'});
     } else {
         User.findOne({
             where: {
-                userName: req.body.userName
+                userName: req.body.username
             }
         }).then(function (user) {
             if (user == null || req.body.password != user.password) {
@@ -43,8 +44,9 @@ router.post('/', function (req, res, next) {
 });
 
 router.get('/logout', function (res,req) {
-    res.redirect('/login')
+    res.redirect('/');
     res.locals.user = null;
+
 })
 
 module.exports = router;

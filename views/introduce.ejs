@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>咖啡廳推薦</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="stylesheets/introduce.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+ <style>
+@font-face {
+font-family: 'word';
+src: url('fonts/SentyTEA.ttf') format('truetype');
+unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;
+}
+</style>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">台灣咖啡地圖</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      <li><a href="index.html">Home</a></li>
+      <li ><a class="dropdown-toggle" data-toggle="dropdown"href="#"> 地區 <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+       <li><a href="district.html">北部</a></li>
+       <li><a href="district.html">中部</a></li>
+       <li><a href="district.html">南部</a></li>
+       <li><a href="district.html">東部</a></li>
+
+    </ul>
+  </li>
+     <li><a href="introduce.html">咖啡廳推薦</a></li>
+          <li><a href="knowledge.html">咖啡豆知識</a></li>
+          <li><a href="history.html">咖啡歷史</a></li>
+      <li><a href="login.html">登入/註冊</a></li>
+      <li ><a class="dropdown-toggle" id="login"data-toggle="dropdown"href="#"> 歡迎登入<b class="caret"></b></a>
+      <ul class="dropdown-menu">
+       <li><a href="showPerson.html">個人資訊</a></li>
+       <li><a href="district.html">登出</a></li>
+      
+
+    </ul>
+    </ul>
+  </div>
+</nav>
+  <div id="content">
+    <div id="cafe_intro">
+      <div id="cafe_intro_header">
+        <div id="cafe_intro_pic_box">
+          <img src="images/img/cafe1/1.jpg" id="cafe_intro_pic">
+        </div>
+        <div id="cafe_intro_title">
+          <p>店名：板橋 猜咖啡</p>
+          <p>地址：新北市板橋區民生路二段234巷11號</p> 
+          <p>電話：02-22575487</p> 
+          <p>評價：4.5</p> 
+          <p>wifi：Ｘ</p> 
+          <p>插座：Ｘ</p>
+        </div>
+      </div>
+      <div id="cafe_intro_article">
+
+        <img src="images/img/cafe1/2.jpg" class="cafe_pic">
+        <p>本來想要一大早吃牛排當早餐，結果要去吃的那家早午餐店沒開，轉來新埔捷運站出口的猜咖啡，記得這家以前也是咖啡店，但沒那麼文青感，現在換了東家改了名字，裡面的裝潢也有了點文青的感覺。</p>
+
+        <img src="images/img/cafe1/3.jpg" class="cafe_pic">
+
+        <p>猜咖啡其實不算早午餐店，主要提供一些輕食與披薩，不過開得早，來吃個早午餐也無妨。</p>
+
+
+           <img src="images/img/cafe1/4.jpg" class="cafe_pic">
+        <p>加一百元套餐附的濃湯，應該是馬鈴薯起司湯吧，挺濃，帶點起司的酸味。</p>
+
+           <img src="images/img/cafe1/5.jpg" class="cafe_pic">
+        <p>猜咖啡的披薩可以選擇兩種口味，我選了瑪格麗特跟野菇培根，一個紅醬一個青醬，餅皮薄脆得有如餅乾，瑪格麗特是簡單的番茄片與九層塔，番茄醬不過酸，口味清爽；野菇培根的培根有點小氣，每片披薩上只有一小片連小拇指都不到的小培根，柳松菇倒是挺多。青醬還算挺香，味道中規中矩，作為早餐或下午茶輕食來說，份量倒也剛好。</p>
+
+           <img src="images/img/cafe1/6.jpg" class="cafe_pic">
+
+        <p>套餐的黑咖啡，溫潤不苦但也不酸，令人印象不深的風味；另外還附了一杯紫米紅豆湯，這挺不錯的，餐後甜湯，紫米健康。</p>
+      </div>
+      <div id="comment">
+      
+      </div>
+    </div>
+
+    
+    <div id="other_cafe_info_area">
+      <div id="other_cafe_title">鄰近選擇 </div>
+      <div class = "other_cafe">
+        <img src="" class = "other_cafe_info_image">
+        <div class = "other_cafe_info">
+          <div class = "other_cafe_name">店名：</div>
+          <div class = "other_cafe_score">評價：</div>
+          <div class = "other_cafe_comments">留言數：</div>
+        </div>
+      </div>
+
+       <div class = "other_cafe">
+        <img src="" class = "other_cafe_info_image">
+        <div class = "other_cafe_info">
+          <div class = "other_cafe_name">店名：</div>
+          <div class = "other_cafe_score">評價：</div>
+          <div class = "other_cafe_comments">留言數：</div>
+        </div>
+      </div>
+
+       <div class = "other_cafe">
+        <img src="" class = "other_cafe_info_image">
+        <div class = "other_cafe_info">
+          <div class = "other_cafe_name">店名：</div>
+          <div class = "other_cafe_score">評價：</div>
+          <div class = "other_cafe_comments">留言數：</div>
+        </div>
+      </div>
+
+       <div class = "other_cafe">
+        <img src="" class = "other_cafe_info_image">
+        <div class = "other_cafe_info">
+          <div class = "other_cafe_name">店名：</div>
+          <div class = "other_cafe_score">評價：</div>
+          <div class = "other_cafe_comments">留言數：</div>
+        </div>
+      </div>
+
+
+    </div>      
+    </div>
+  </div>
+
+
+
+</body>
+</html>

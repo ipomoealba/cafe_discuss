@@ -47,7 +47,7 @@ router.post('/newCafe', upload.single('image'), function (req, res, next) {
             .header("Content-Type", "multipart/form-data")
             .attach("image", path.resolve("./uploads/" + req.file.filename))
             .end(function (result) {
-                console.log(result.status, result.headers, "/////",result.body);
+                console.log(result.status, result.headers, "/////", result.body);
                 var newCafe = {
                     id: encode().value(req.body.title + req.body.link + req.body.article),
                     title: req.body.title,

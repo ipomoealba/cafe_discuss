@@ -1,0 +1,55 @@
+body{
+	background-color:#FFBB66 ;
+	 background-image: url('../images/img/header.jpg');
+	  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+}
+.navbar-brand{
+	font-family: "word";
+}
+.navbar-nav{
+	float: right;
+	font-family:Microsoft JhengHei;
+}
+.dropdown{
+	top:200px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+}
+.dropdown-toggle{
+	width:80px;
+}
+
+#login{
+	width:120px;
+
+}
+#history{
+
+	padding-top: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#cafe_history_title{
+	padding-left: 20px;
+	font-family:Microsoft JhengHei;
+}
+
+#cafe_history_article{
+	background-color: #000000;
+	color: #FFFFFF;
+	opacity: 0.9;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	font-family:Microsoft JhengHei;
+
+}

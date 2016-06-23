@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>新增咖啡店資訊</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <head>
+      <title>台北咖啡地圖</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">台北咖啡地圖</a>
+		    </div>
+      <div class="right-nav">
+		    <ul class="nav navbar-nav"> 
+		      <li><a href="#">Home</a></li>
+		      <li ><a class="dropdown-toggle" data-toggle="dropdown"href="#"> 地區 <b class="caret"></b></a>
+		      <ul class="dropdown-menu">
+		       <li><a href="district.html">北投區</a></li>
+		       <li><a href="district.html">士林區</a></li>
+		       <li><a href="district.html">大同區</a></li>
+		       <li><a href="district.html">中山區</a></li>
+		       <li><a href="district.html">松山區</a></li>
+		       <li><a href="district.html">內湖區</a></li>
+		       <li><a href="district.html">萬華區</a></li>
+		       <li><a href="district.html">中正區</a></li>
+		       <li><a href="district.html">大安區</a></li>
+		       <li><a href="district.html">信義區</a></li>
+		       <li><a href="district.html">南港區</a></li>
+		       <li><a href="district.html">文山區</a></li>
+		    </ul>
+		  </li>
+		      <li><a href="#">咖啡廳推薦</a></li>
+		      <li><a href="#">個人資訊</a></li>
+		      <li><a href="#">編輯頁面</a></li>
+		      <li><a href="#">咖啡豆知識</a></li>
+		      <li><a href="#">咖啡歷史</a></li>
+		    </ul>
+		  </div>
+          </div>		   
+		</nav>
+
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+   
+                <span class="right">
+ 
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+				<nav class="codrops-demos">
+
+				</nav>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form ui-content">
+                            <form  action="" autocomplete="on"> 
+                                <h1>咖啡店推薦</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" >店名</label>
+                                    <input id="username" name="username" required="required" type="name" placeholder="請輸入咖啡店店名"/>
+                                </p>
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" >地址</label>
+                                    <input id="username" name="username" required="required" type="name" placeholder="請輸入咖啡店地址"/>
+                                </p>
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > 電話</label>
+                                    <input id="username" name="username" required="required" type="mail" placeholder="02-1234-5678"/>
+                                </p>
+                                <p> 
+                                    <label for="username" class="uname">評價</label>
+                                    <select name="favorCoffee" class="wrapper-dropdown-5">
+                                      <option value="espresso">五顆星</option>
+                                      <option value="americano">四顆星</option>
+                                      <option value="cappuccino">三顆星</option>
+                                      <option value="latte">兩顆星</option>
+                                      <option value="vienna">一顆星</option>
+                                    </select>
+                                </p>
+                               
+                                <p> 
+                                    <label for="favorShop" class="favorShop" data-icon="p">推薦的咖啡</label>
+                                    <input id="favorShop" name="favorShop" type="text" placeholder="提拉米蘇拿鐵" /> 
+                                </p>
+                                <p> 
+                                    <label for="about" class="about">感想</label>
+                                    <textarea cols="53" rows="5" placeholder=" 他們的提拉米蘇拿鐵，讓我不是在咖啡廳裡，就是在前往咖啡廳的路上"></textarea>
+ 
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit" value="提交" /> 
+								</p>
+                                <p class="change_link">
+									<a href="#toregister" type="reset" class="to_register">重設</a>
+								</p>
+                            </form>
+                        </div>
+
+
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

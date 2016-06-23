@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>台灣咖啡地圖</title>
+    <title>咖啡歷史</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/index.css" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/history.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-
 <style>
     @font-face {
         font-family: 'word';
         src: url('fonts/SentyTEA.ttf') format('truetype');
+        /*unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;*/
     }
 </style>
-
 <body style="height:1500px">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -27,14 +25,13 @@
         </div>
         <ul class="nav navbar-nav">
 
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="district.html">北部</a></li>
                     <li><a href="district.html">中部</a></li>
                     <li><a href="district.html">南部</a></li>
                     <li><a href="district.html">東部</a></li>
-
 
                 </ul>
             </li>
@@ -44,41 +41,40 @@
             <% if(!user) { %>
             <li><a href="/login">登入/註冊</a></li>
             <% } %>
-            <% if(user) {%>
+            <% if(user) { %>
             <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="/showPerson">個人資訊</a></li>
-                    <li><a href="../login/logout">登出</a></li>
+                    <li><a href="#">登出</a></li>
                 </ul>
             </li>
             <% } %>
         </ul>
+        </ul>
     </div>
 
+
 </nav>
-<nav class="coffee">
 
-    <div class="pic">
-        <img src="images/img/header.jpg">
-        <div class="title-box">
-            <div id="title">台灣咖啡地圖</div>
-            <div id="titleA">整個城市都是我的咖啡館</div>
-            <div id="titleB">我不在咖啡館，就是在咖啡館的路上</div>
+<div id="history">
+    <div id="cafe_history">
+        <h2 id="cafe_history_title">歷史</h2>
+        <div id="cafe_history_article">
+            <p>
+                在中東，自16世紀起，咖啡屋（波斯語：qahveh-khaneh‎，土耳其語：kahvehane 或
+                kıraathane）作爲社交聚會的地方，人們聚集在一起喝咖啡或茶、聽音樂，閱讀、下西洋棋或雙陸棋、或聆聽《列王紀》的誦讀。在今天的伊朗和土耳其，咖啡屋或會招惹一群看公眾電視的男性。
+            </p>
 
+            <p>
+                傳統的關於「維也納咖啡館」的起源說法來自於在1683年「維也納戰役」中被打敗的土耳其人遺失的裝滿綠色豆子的神秘袋子。所有這些裝滿咖啡的袋子都被送給了勝利的波蘭國王約翰三世（John III，也就是John
+                Sobieski，而他將它們送給了他的一個軍官Franciszek Jerzy
+                Kulczycki。Kulczycki用這些咖啡在維也納開了第一家咖啡館。但懷疑者們認為這個故事太過輕率，日期也比較晚，所以不足為信。</p>
+            <p>
+                在16世紀時在伊斯坦堡、開羅和麥加便有了咖啡館。17世紀第一家咖啡館在歐洲開張。通過在17世紀引進咖啡，咖啡館在17世紀第一次在歐洲流行起來。英國的第一家土耳其咖啡館由一個名叫Jacob或Jacobs的土耳其猶太人在1650年的牛津開辦。而倫敦的第一家咖啡館於2年後在Cornhill的St.
+                Michael's Alley開張。
+            </p>
         </div>
     </div>
-</nav>
-<div id="aboutus">
-
-    <h1>About us</h1>
-    <p>
-        台灣人最喜歡在咖啡廳忙裡偷閒<br>
-        你可以透過我們<br>
-        找到最適合自己的咖啡館<br>
-        去擁有最閒最舒適的下午
-    </p>
 </div>
-
-
 </body>
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8"/>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <title>註冊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<head>
+    <title>台北咖啡地圖</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">台北咖啡地圖</a>
+        </div>
+        <div class="right-nav">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="district.html">北部</a></li>
+                        <li><a href="district.html">中部</a></li>
+                        <li><a href="district.html">南部</a></li>
+                        <li><a href="district.html">東部</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="introduce.html">咖啡廳推薦</a></li>
+                <li><a href="knowledge.html">咖啡豆知識</a></li>
+                <li><a href="history.html">咖啡歷史</a></li>
+                <li><a href="login.html"> 登入/註冊</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Codrops top bar -->
+    <div class="codrops-top">
+   
+                <span class="right">
+ 
+                </span>
+        <div class="clr"></div>
+    </div><!--/ Codrops top bar -->
+    <header>
+        <nav class="codrops-demos">
+
+        </nav>
+    </header>
+
+
+    <section>
+        <div id="container_demo">
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form ui-content input-group-sm">
+                    <form action="" autocomplete="on">
+                        <h1>個人資料</h1>
+                        <p>
+                            <label class="username" data-icon="u">暱稱</label>
+                            <input class="form-control" id="username" name="username" required="required"
+                                   placeholder="您的大名"/>
+                        </p>
+
+                        <p>
+                            <label class="username" data-icon="u"> 電子信箱</label>
+                            <input class="form-control" id="email" name="email" required="required"
+                                   placeholder="Confucius@mail.com"/>
+                        </p>
+                        <label>密碼</label>
+                        <input name="password" class="form-control" type="password">
+                        <p>
+                            <label for="username" class="uname">最常喝的咖啡種類</label>
+                            <select name="favorCoffee" class="form-control">
+                                <option value="espresso">義式咖啡</option>
+                                <option value="americano">美式咖啡</option>
+                                <option value="cappuccino">卡布奇諾</option>
+                                <option value="latte">拿鐵</option>
+                                <option value="vienna">維也納咖啡</option>
+                                <option value="irish">愛爾蘭咖啡</option>
+                                <option value="macchiatto">焦糖瑪奇朵</option>
+                                <option value="mocha">摩卡</option>
+                                <option value="breve">半拿鐵</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd">最常去的咖啡店區域 </label>
+                            <select name="favorCoffee" class="form-control">
+                                <option value="irish">士林區</option>
+                                <option value="irish">北投區</option>
+                                <option value="macchiatto">內湖區</option>
+                                <option value="mocha">中山區</option>
+                                <option value="breve">半拿鐵</option>
+                                <option value="shon">松山區</option>
+                                <option value="shon">大同區</option>
+                                <option value="americano">中正區</option>
+                                <option value="cappuccino">南港區</option>
+                                <option value="latte">大安區</option>
+                                <option value="vienna">信義區</option>
+                                <option value="vienna">萬華區</option>
+                                <option value="cappuccino">文山區</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="about" class="about">關於我</label>
+                            <textarea cols="53" name="aboutMe" class="form-control" rows="5"
+                                      placeholder=" 我不是在咖啡廳裡，就是在前往咖啡廳的路上"></textarea>
+                        </p>
+                        <p class="login button">
+                            <input type="submit" value="提交"/>
+                        </p>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+
+</div>
+</body>
+</html>

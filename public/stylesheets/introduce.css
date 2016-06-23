@@ -1,0 +1,161 @@
+body{
+	width: 100%;
+	background-color:#FFBB66 ;
+	 background-image: url('../img/header.jpg');
+	  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+}
+.navbar-brand{
+	font-family: "word";
+}
+.navbar-nav{
+	float: right;
+	font-family:Microsoft JhengHei;
+
+}
+.dropdown{
+	top:200px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+}
+.dropdown-toggle{
+	width:80px;
+}
+
+#login{
+	width:100px;
+
+}
+
+
+#content{
+
+	padding-top: 60px;
+	display: flex;
+	font-family:Microsoft JhengHei;
+}
+
+#cafe_intro{
+
+	width:80%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	font-family:Microsoft JhengHei;
+}
+
+#other_cafe_info_area{
+	width:20%;
+	margin-top: 20px;
+	font-family:Microsoft JhengHei;
+}
+
+#other_cafe_title{
+	color:white;
+	font-size: 2em;
+	font-family:Microsoft JhengHei;
+}
+
+#cafe_intro_header{
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:white;
+	background-color:#000000;
+	opacity:0.9;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	display: flex;
+	font-family:Microsoft JhengHei;
+}
+
+.other_cafe{
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:white;
+	background-color:#000000;
+	opacity:0.9;
+	width: 90%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	display: flex;
+	font-family:Microsoft JhengHei;
+
+}
+
+.other_cafe_info_image{
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.other_cafe_score{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+#cafe_intro_article{
+
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:white;
+	background-color:#000000;
+	opacity:0.9;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
+	font-family:Microsoft JhengHei;
+}
+
+
+#cafe_intro_pic_box{
+	
+
+	background-color: black; 
+	font-family:Microsoft JhengHei;
+}
+
+#cafe_intro_pic{
+
+}
+
+#cafe_intro_title{
+	width:80%;
+}
+
+.cafe_pic{
+	opacity:0.9;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
+
+
+#cafe_intro_pic{
+	width: 50%;
+}
+
+#comment{
+	width:90%;
+}
+
+
