@@ -10,7 +10,7 @@ var session = require('session');
 router.get('/', function (req, res, next) {
     User.find({
         where: {
-            id: req.query.id
+            id: req.session.user.id
         }
     }).then(function (usr) {
         if (req.session.user) {
@@ -21,3 +21,6 @@ router.get('/', function (req, res, next) {
     })
 
 })
+
+
+module.exports = router

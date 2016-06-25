@@ -15,7 +15,8 @@ var personalPage = require('./routes/personalPage');
 var district = require('./routes/district');
 var knowledge = require('./routes/knowledge');
 var introduce = require('./routes/introduce');
-var editcafePage = require('./routes/editcafePage')
+var editcafePage = require('./routes/editcafePage');
+var showPerson = require('./routes/showPerson')
 var app = express();
 
 // view engine setup
@@ -42,6 +43,7 @@ app.use('/district',district);
 app.use('/knowledge',knowledge);
 app.use('/introduce',introduce);
 app.use('/editcafePage',editcafePage);
+app.use('/showPerson',showPerson);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');

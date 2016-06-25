@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
             ]
 
         }).then(function (cafe) {
-            res.render('index', {cafe: cafe, user: req.session.user.userName})
+            res.render('index', {cafe: cafe, user: req.session.user})
         })
 
     }

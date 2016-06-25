@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="UTF-8" />
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>個人資訊</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/showPersonal.css" />
-    </head>
-     <style>
-@font-face {
-font-family: 'word';
-src: url('fonts/SentyTEA.ttf') format('truetype');
-}
+<head>
+    <meta charset="UTF-8"/>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <title>個人資訊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/showPersonal.css"/>
+</head>
+<style>
+    @font-face {
+        font-family: 'word';
+        src: url('fonts/SentyTEA.ttf') format('truetype');
+    }
 </style>
-    <head>
-      <title>台北咖啡地圖</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    </head>
+<head>
+    <title>台北咖啡地圖</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">台北咖啡地圖</a>
-                </div>
-                <div class="right-nav">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="district?">北部</a></li>
-                                <li><a href="district.html">中部</a></li>
-                                <li><a href="district.html">南部</a></li>
-                                <li><a href="district.html">東部</a></li>
 
-                            </ul>
-                        </li>
-                        <!--<li><a href="introduce.html">咖啡廳推薦</a></li>-->
-                        <li><a href="knowledge.html">咖啡豆知識</a></li>
-                        <li><a href="history.html">咖啡歷史</a></li>
-                        <li><a href="login.html"> 登入/註冊</a></li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    <nav>
-        <!-- <h3 id="title">個人資訊</h3> -->
-        <div class="coverImage"> 
-            <img src="<%= usr.img %>" alt="personal" style="height:200px">
-            <ul>
-                <li>暱稱：<%= usr.userName %></li>
-                <li>E-mail：<%= usr.Email %></li>
-                <li>總推薦數：<%= usr.counter %></li>
-                <!--<li>總數：</li>-->
-            </ul>
-        </div> 
-        <div>
-            <button class="button">我的評論</button>
-            <button class="button">我的推薦</button>
-            <button class="button">我的追蹤</button>
-            <button class="button">追蹤者</button>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">台灣咖啡地圖</a>
         </div>
-    </nav>
-    <div class="thumb article">
-            <img src="images/shop1.jpg" style="height:150px">
-            <ul>
-                <li>店名：</li>
-                <li>評價：4.3</li>
-                <li>人氣：</li>
-                <li>電話：</li>
-                <li>地址：</li>
-            </ul>
+        <ul class="nav navbar-nav">
+
+            <li><a href="/">Home</a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> 地區 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/district/N">北部</a></li>
+                    <li><a href="/district/W">中部</a></li>
+                    <li><a href="/district/S">南部</a></li>
+                    <li><a href="/district/E">東部</a></li>
+
+                </ul>
+            </li>
+            <% if(user){ %>
+            <li><a href="/editcafePage">我要新增</a></li>
+            <% } %>
+            <li><a href="/knowledge">咖啡豆知識</a></li>
+            <li><a href="/history">咖啡歷史</a></li>
+            <% if(!user) { %>
+            <li><a href="/login">登入/註冊</a></li>
+            <% } %>
+            <% if(user) { %>
+            <li><a class="dropdown-toggle" id="login" data-toggle="dropdown" href="#"><%= user.userName %> <b
+                            class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/showPerson">個人資訊</a></li>
+                    <li><a href="../login/logout">登出</a></li>
+                </ul>
+            </li>
+            <% } %>
+        </ul>
     </div>
 
-
+</nav>
+<nav>
+    <!-- <h3 id="title">個人資訊</h3> -->
+    <div class="coverImage">
+        <img src="<%= usr.img %>" alt="personal" style="height:200px">
+        <ul>
+            <li>暱稱：<%= usr.userName %></li>
+            <li>E-mail：<%= usr.Email %></li>
+            <li>總推薦數：<%= usr.counter %></li>
+            <!--<li>總數：</li>-->
+        </ul>
+    </div>
+    <div>
+        <button class="button">我的評論</button>
+        <button class="button">我的推薦</button>
+        <button class="button">我的追蹤</button>
+        <button class="button">追蹤者</button>
+    </div>
+</nav>
+<div class="thumb article">
+    <img src="images/shop1.jpg" style="height:150px">
+    <ul>
+        <li>店名：</li>
+        <li>評價：4.3</li>
+        <li>人氣：</li>
+        <li>電話：</li>
+        <li>地址：</li>
+    </ul>
+</div>
 
 
 </body>

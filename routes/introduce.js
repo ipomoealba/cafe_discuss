@@ -16,7 +16,7 @@ router.get('/:id', function (req, res) {
             res.render('introduce', {cafe: cafe, user: null})
         })
         // res.render('introduce', {cafe: cafe, user: null});
-    } else {r
+    } else {
         Cafe.find({
             where: {id: req.params.id}
         }).then(function (cafe) {

@@ -35,8 +35,13 @@ unicode-range: 文字1 編碼, 文字2 編碼, 文字3 編碼;
                 </ul>
             </li>
             <!--<li><a href="/introduce">咖啡廳推薦</a></li>-->
+            <% if(user){ %>
+            <li><a href="/editcafePage">我要新增</a></li>
+            <% } %>
             <li><a href="/knowledge">咖啡豆知識</a></li>
+
             <li><a href="/history">咖啡歷史</a></li>
+
             <% if(!user) { %>
             <li><a href="/login">登入/註冊</a></li>
             <% } %>
